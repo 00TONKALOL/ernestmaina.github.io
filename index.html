@@ -4,13 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ernest Maina | Aspiring Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --green-600: #1f8a3d; /* primary */
+      --green-400: #34a853;
+      --neutral-100: #f5f7f6;
+      --neutral-300: #d1d5db;
+      --text: #0f172a;
+      --muted: #4b5563;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f9fafb;
-      color: #111827;
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      background-color: var(--neutral-100);
+      color: var(--text);
       margin: 0;
       padding: 0;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
     }
     .container {
       max-width: 900px;
@@ -19,11 +33,24 @@
     }
     header {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 28px;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      flex-direction:column;
+    }
+    .brand-row{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.25rem;
+      margin-bottom: 0;
+      color: var(--green-600);
+      font-weight:700;
     }
     h2 {
       font-size: 1.5rem;
@@ -31,8 +58,9 @@
       margin-bottom: 10px;
     }
     .tagline {
-      font-size: 1.1rem;
-      color: #374151;
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-top:4px;
     }
     p {
       line-height: 1.6;
@@ -42,18 +70,56 @@
       background: #ffffff;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 18px rgba(16,24,40,0.04);
       margin-top: 20px;
+    }
+    .btn {
+      display:inline-block;
+      background: var(--green-600);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:600;
+    }
+    .btn.secondary{
+      background: transparent;
+      color: var(--green-600);
+      border: 1px solid var(--neutral-300);
     }
     footer {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 48px;
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--muted);
+    }
+    /* navigation */
+    nav {
+      width:100%;
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      margin-bottom:14px;
+    }
+    nav a{
+      color:var(--green-600);
+      text-decoration:none;
+      font-weight:600;
+    }
+    @media (min-width:800px){
+      header{flex-direction:row; justify-content:space-between;}
+      .container{max-width:980px}
     }
     a {
       color: #2563eb;
       text-decoration: none;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -62,38 +128,61 @@
     <header>
       <h1>Ernest Maina</h1>
       <p class="tagline">Aspiring Data Engineer</p>
-      <img src="images/profile.jpg" alt="Ernest Maina" style="width:150px; border-radius:50%; margin-top:20px;" />
-    </header>
+      <img src="0c2c695e-7083-49eb-b1d1-5a6d1e03da90.jpg" alt="Ernest Maina" class="profile-photo" />
+    <header>
+      <div class="brand-row">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <div>
+            <h1>Ernest Maina</h1>
+            <p class="tagline">Aspiring Data Engineer — focused on sustainable, reliable data systems</p>
+          </div>
+        </div>
 
-    <section class="card">
-      <h2>About Me</h2>
-      <p>
+        <img src="images/profile.svg" alt="Ernest profile" style="width:140px; border-radius:50%; margin-top:12px;" />
+      </div>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
         I am an aspiring data engineer with a growing interest in building reliable data pipelines, 
         managing databases, and transforming raw data into structured, usable formats. 
         I am currently developing my skills in SQL, Python, and data engineering fundamentals.
-      </p>
+        <p>
+          I am an aspiring data engineer with a focus on building sustainable, reliable data pipelines that help environmental and business teams make informed decisions. I design and maintain systems for clean, well-modeled data and am developing skills in SQL, Python, and scalable ETL workflows.
+        </p>
+        <p><a class="btn" href="#contact">Get in touch</a></p>
     </section>
 
     <section class="card">
       <h2>Skills & Tools</h2>
-      <p>
-        SQL • Python • Data Cleaning • Data Modeling • ETL Concepts • Git & GitHub
-      </p>
+        <p>
+          SQL • Python • Data Cleaning • Data Modeling • ETL Concepts • Cloud Data Stores • Git & GitHub
+        </p>
     </section>
 
     <section class="card">
       <h2>Projects</h2>
-      <p>
-        Sample Data Engineering Project (In Progress)<br />
-        More projects will be added as I continue learning and building hands-on experience.
-      </p>
+        <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+          <img src="images/eco-graphic.svg" alt="eco project" style="width:120px;height:auto;border-radius:8px;" />
+          <div>
+            <p>
+              Sustainable Data Pipeline — building an ETL process to ingest environmental sensor data, clean it, and store it for analysis and reporting.
+            </p>
+            <p><a class="btn secondary" href="#projects">View details</a></p>
+          </div>
+        </div>
     </section>
 
     <section class="card">
       <h2>Contact</h2>
-      <p>
-        Email: <a href="mailto:erniemaina@gmail.com">erniemaina@gmail.com</a>
-      </p>
+        <p>
+          For collaboration or opportunities related to data engineering and sustainability, reach out via email: <a href="mailto:erniemaina@gmail.com">erniemaina@gmail.com</a>
+        </p>
+        <p><a class="btn" href="mailto:erniemaina@gmail.com">Email Ernest</a></p>
     </section>
 
     <footer>
@@ -102,3 +191,4 @@
   </div>
 </body>
 </html>
+
