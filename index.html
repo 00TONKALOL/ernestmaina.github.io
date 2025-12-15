@@ -111,7 +111,7 @@
       .container{max-width:980px}
     }
     a {
-      color: #2563eb;
+      color: var(--green-600);
       text-decoration: none;
     }
     .profile-photo {
@@ -126,10 +126,6 @@
 <body>
   <div class="container">
     <header>
-      <h1>Ernest Maina</h1>
-      <p class="tagline">Aspiring Data Engineer</p>
-      <img src="0c2c695e-7083-49eb-b1d1-5a6d1e03da90.jpg" alt="Ernest Maina" class="profile-photo" />
-    <header>
       <div class="brand-row">
         <div style="display:flex;align-items:center;gap:12px;">
           <div>
@@ -138,23 +134,24 @@
           </div>
         </div>
 
-        <img src="images/profile.svg" alt="Ernest profile" style="width:140px; border-radius:50%; margin-top:12px;" />
+        <img src="0c2c695e-7083-49eb-b1d1-5a6d1e03da90.jpg" alt="Ernest Maina" class="profile-photo" />
       </div>
-
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </header>
-        I am an aspiring data engineer with a growing interest in building reliable data pipelines, 
-        managing databases, and transforming raw data into structured, usable formats. 
-        I am currently developing my skills in SQL, Python, and data engineering fundamentals.
-        <p>
-          I am an aspiring data engineer with a focus on building sustainable, reliable data pipelines that help environmental and business teams make informed decisions. I design and maintain systems for clean, well-modeled data and am developing skills in SQL, Python, and scalable ETL workflows.
-        </p>
-        <p><a class="btn" href="#contact">Get in touch</a></p>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>
+        I am an aspiring data engineer with a focus on building sustainable, reliable data pipelines that help environmental and business teams make informed decisions. I design and maintain systems for clean, well-modeled data and am developing skills in SQL, Python, and scalable ETL workflows.
+      </p>
+      <p><a class="btn" href="#contact">Get in touch</a></p>
+    </section>
     </section>
 
     <section class="card">
